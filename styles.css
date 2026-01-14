@@ -49,6 +49,22 @@ nav {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-main {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+
+.logo-sub {
+    font-size: 1.1rem;
+    font-weight: normal;
+    opacity: 0.9;
 }
 
 .nav-links {
@@ -138,7 +154,10 @@ nav {
 
 /* Botón principal de llamado a la acción */
 .cta-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     background: white;
     color: #1e40af;
     padding: 1rem 2.5rem;
@@ -153,6 +172,32 @@ nav {
 .cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.cta-button i {
+    font-size: 1.2rem;
+}
+
+/* Botón de WhatsApp personalizado */
+.whatsapp-button {
+    background: #25D366;
+    color: white;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.whatsapp-button:hover {
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+    transform: translateY(-3px);
+}
+
+.whatsapp-icon {
+    width: 24px;
+    height: 24px;
+    fill: white;
 }
 
 /* ================================ */
@@ -335,15 +380,15 @@ nav {
 
 .companias-logos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
     margin-top: 3rem;
     align-items: center;
 }
 
 .compania-logo {
     background: white;
-    padding: 2rem;
+    padding: 1.5rem 1rem;
     border-radius: 10px;
     text-align: center;
     font-weight: bold;
@@ -351,6 +396,11 @@ nav {
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     border: 2px solid #e2e8f0;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
 }
 
 .compania-logo:hover {
@@ -430,7 +480,10 @@ nav {
 }
 
 .cta-final-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     background: white;
     color: #1e40af;
     padding: 1.2rem 3rem;
@@ -444,6 +497,10 @@ nav {
 .cta-final-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.cta-final-button i {
+    font-size: 1.4rem;
 }
 
 /* ================================ */
@@ -477,7 +534,6 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
     box-shadow: 0 5px 20px rgba(37, 211, 102, 0.5);
     z-index: 1000;
     text-decoration: none;
@@ -487,6 +543,13 @@ footer p {
 
 .whatsapp-float:hover {
     transform: scale(1.1);
+}
+
+.whatsapp-float-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+    color: white;
 }
 
 /* Animación de pulso para el botón de WhatsApp */
@@ -509,45 +572,109 @@ footer p {
         display: none;
     }
 
-    /* Ajustar tamaño del hero en móviles */
+    /* Ajustar logo en móviles */
+    .logo {
+        font-size: 1rem;
+        text-align: center;
+        width: 100%;
+        padding: 0 1rem;
+        line-height: 1.2;
+        word-wrap: break-word;
+    }
+
+    .logo-main {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 0.3rem;
+        text-align: center;
+    }
+
+    .logo-sub {
+        font-size: 0.9rem;
+        font-weight: normal;
+        opacity: 0.9;
+        text-align: center;
+    }
+
+    /* Ajustar navegación en móviles */
+    nav {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Mejorar alineación del hero en móviles */
     .hero {
         padding: 120px 1rem 80px;
-        min-height: 500px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        line-height: 1.1;
+        width: 100%;
+        word-wrap: break-word;
+    }
+
+    .hero h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        line-height: 1.2;
+        width: 100%;
     }
 
     .hero p {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        line-height: 1.5;
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero br {
+        display: none;
+    }
+
+    /* Ajustar botón CTA en móvil */
+    .cta-button {
         font-size: 1rem;
+        padding: 0.8rem 2rem;
+        margin-top: 1rem;
     }
 
-    /* Ajustar títulos de sección en móviles */
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .section-subtitle {
-        font-size: 1rem;
-    }
-
-    /* Ajustar padding de secciones en móviles */
-    .beneficios,
-    .servicios,
-    .companias,
-    .testimonios,
-    .imagenes-destacadas,
-    .cta-final {
-        padding: 60px 1rem;
-    }
-
-    /* Ajustar grid en móviles */
     .beneficios-grid,
     .servicios-grid,
     .testimonios-grid,
     .imagenes-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Ajustar grid de compañías en móviles */
+    .companias-logos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
 
     /* Ajustar botón flotante de WhatsApp en móviles */
@@ -578,5 +705,11 @@ footer p {
     .servicios-grid,
     .beneficios-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Ajustar grid de compañías en tablets */
+    .companias-logos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
     }
 }
