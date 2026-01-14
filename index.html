@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lopez Gilbert Corredores De Seguros</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 <body>
     <!-- ================================ -->
@@ -12,7 +13,10 @@
     <!-- ================================ -->
     <header>
         <nav>
-            <div class="logo">🚗 LOPEZ GILBERT Corredores De Seguros</div>
+            <div class="logo">
+                <div class="logo-main">🚗 LOPEZ GILBERT</div>
+                <div class="logo-sub">Corredores De Seguros</div>
+            </div>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#beneficios">Beneficios</a></li>
@@ -32,7 +36,10 @@
             <h2>Corredores de Seguros</h2>
             <br>
             <p>Licda. Wendy Gilbert. Atenciones especializadas. <br>  Elige entre las Compañias aseguradoras mas reconocidas del país. Asesoría profesional, trámites rápidos y coberturas garantizadas.</p>
-            <a href="#" class="cta-button" onclick="openWhatsApp(); return false;">Solicita tu cotizacion</a>
+            <a href="#" class="cta-button" onclick="openWhatsApp(); return false;">
+    <i class="bi bi-whatsapp"></i>
+    Solicita tu cotización
+</a>
         </div>
     </section>
 
@@ -204,6 +211,8 @@
                 <div class="compania-logo">One Alliance Seguros</div>
                 <div class="compania-logo">Sindicato Nacional de Choferes</div>
                 <div class="compania-logo">Mapfre Salud ARS</div>
+
+
             </div>
         </div>
     </section>
@@ -245,7 +254,10 @@
         <div class="container">
             <h2>¿Listo para Proteger Tu Vehículo?</h2>
             <p>No esperes más. Cotiza gratis y sin compromiso hoy mismo.</p>
-            <a href="#" class="cta-final-button" onclick="openWhatsApp(); return false;">Contactar por WhatsApp</a>
+            <a href="#" class="cta-final-button" onclick="openWhatsApp(); return false;">
+    <i class="bi bi-whatsapp"></i>
+    Contactar por WhatsApp
+</a>
         </div>
     </section>
 
@@ -260,7 +272,7 @@
     <!-- BOTÓN FLOTANTE DE WHATSAPP -->
     <!-- ================================ -->
     <a href="#" class="whatsapp-float" onclick="openWhatsApp(); return false;">
-        💬
+        <i class="bi bi-whatsapp"></i>
     </a>
 
     <!-- ================================ -->
@@ -278,7 +290,7 @@
             const phoneNumber = '18091234567';
             
             // Mensaje predefinido que se enviará
-            const message = encodeURIComponent('Hola! Me interesa cotizar un seguro de vehículo 🚗');
+            const message = encodeURIComponent('Hola! Me interesa cotizar un seguro de vehículo ');
             
             // Abre WhatsApp en una nueva ventana
             window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
